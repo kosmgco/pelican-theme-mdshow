@@ -3,6 +3,22 @@
 {% block title %} {{ SITENAME }} | {{ page.title }} {% endblock %}
 
 {% block content %}
+<style>
+@media(min-width: 0px) {
+    body {
+        height: auto;
+    }
+    .menu .links, .menu .copyright {
+        display:none;
+    }
+    .menu {
+        height: 65%;
+    }
+    .content {
+        display: block;
+    }
+}
+</style>
 <h3> {{ page.title|upper }} </h3><hr />
 {{ page.content }}
 {% endblock %}

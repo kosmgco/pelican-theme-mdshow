@@ -1,0 +1,97 @@
+::-webkit-scrollbar{
+    display:none;
+}
+html, body {
+    height: 99%;
+}
+.menu {
+    width: 20%;
+    height: 100%;
+    float: left;
+    text-align: center;
+    overflow: scroll;
+}
+.catalog {
+    width: 25%;
+    height: 100%;
+    float: left;
+    overflow: scroll;
+}
+.content {
+    width: 55%;
+    float: left;
+    height: 100%;
+    overflow: scroll;
+}
+.title {
+    height: 220px;
+    width: 220px;
+    border-radius: 110px;
+    text-align: center;
+    display: inline-block;
+}
+.menu-link {
+    width: 20px;
+    height: 20px;
+}
+.links, .copyright {
+    height: 50px;
+    position: relative;
+    bottom: -50px;
+}
+.links a {
+    margin: 10px;
+}
+.link-tags {
+    background: aliceblue !important;
+    margin: 3px;
+    font-size: 14px;
+}
+.links-menu {
+}
+
+
+@media (min-width: 0px) {
+    ::-webkit-scrollbar {
+        display:none;
+    }
+    html, body {
+        height: 98%;
+    }
+    body {
+        min-width: 315px;
+    }
+    .menu, .catalog, .content {
+        width: 100%;
+    }
+}
+
+@media (min-width: 550px) {
+    ::-webkit-scrollbar{
+        display:none;
+    }
+    html, body {
+        height: 98%;
+    }
+    body {
+        min-width: 315px;
+    }
+    .menu, .catalog, .content {
+        width: 100%;
+    }
+}
+
+@media (min-width: 750px) {
+    ::-webkit-scrollbar{
+        display:none;
+    }
+    html, body {
+        height: 98%;
+    }
+    body {
+        min-width: 315px;
+    }
+    .menu, .catalog, .content {
+        width: 100%;
+    }
+}
