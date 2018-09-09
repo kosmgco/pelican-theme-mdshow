@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block catalog %}
+    {% for article in articles %}
+        <b> {{ article.date.strftime('%Y-%m-%d') }}</b><br/>
+        <a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></br>
+    {% endfor %}
+{% endblock %}
+
+{% block content %}
+    Hello world
+{% endblock %}

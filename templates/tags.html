@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %} {{ SITENAME }} | TAGS {% endblock %}
+
+{% block content %}
+    <style>
+        .tags {
+            padding-top: 10%;
+        }
+        .tags a {
+            margin: 10px 3px;
+        }
+    </style>
+    <h3>TAGS</h3><hr />
+    <div class="tags">
+        {% for tag, articles in tags | sort %}
+            <a href="{{ SITEURL }}/{{ tag.url }}" style="font-size: {{ 14 * articles|count}}px">{{ tag }}</a>
+        {% endfor %}
+    </div>
+{% endblock %}
