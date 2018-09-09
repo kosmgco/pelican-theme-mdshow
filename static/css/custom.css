@@ -50,7 +50,7 @@ html, body {
 .links-menu {
 }
 
-
+/* 
 @media (min-width: 0px) {
     ::-webkit-scrollbar {
         display:none;
@@ -66,7 +66,8 @@ html, body {
     }
 }
 
-@media (min-width: 550px) {
+*/
+@media (max-width: 550px) {
     ::-webkit-scrollbar{
         display:none;
     }
@@ -81,17 +82,3 @@ html, body {
     }
 }
 
-@media (min-width: 750px) {
-    ::-webkit-scrollbar{
-        display:none;
-    }
-    html, body {
-        height: 98%;
-    }
-    body {
-        min-width: 315px;
-    }
-    .menu, .catalog, .content {
-        width: 100%;
-    }
-}
