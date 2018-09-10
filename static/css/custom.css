@@ -79,6 +79,7 @@ html, body {
     }
     .menu, .catalog, .content {
         width: 100%;
+        overflow: hidden;
     }
 }
 
