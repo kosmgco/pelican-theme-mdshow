@@ -8,6 +8,10 @@
         content: '\A';
         white-space: pre-wrap;
     }
+    .content h4 {
+        text-transform: uppercase;
+        letter-spacing: 0.2rem;
+    }
     @media(max-width: 550px) {
         body {
             height: auto;
@@ -28,7 +32,7 @@
 </style>
 <h3>CATEGORIES</h3><hr/>
 {% for category, articles in categories %}
-    <h4> {{ category }} </h4>
+    <h4> {{ category|upper }} </h4>
     {% for article in articles %}
     <a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a> <em>{{ article.date.strftime('%Y-%m-%d')}}</em>
     {% endfor %}
