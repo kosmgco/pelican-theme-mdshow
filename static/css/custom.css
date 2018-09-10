@@ -10,16 +10,27 @@ html, body {
     float: left;
     text-align: center;
     overflow: scroll;
+    min-width: 300px;
 }
 .catalog {
     width: 25%;
     height: 100%;
     float: left;
     overflow: scroll;
+    min-width: 350px;
 }
+
+.catalog b:before {
+    content: '\A';
+    white-space: pre-wrap;
+}
+
+.catalog b:after {
+    content: '\A';
+    white-space: pre-wrap;
+}
+
 .content {
-    width: 55%;
-    float: left;
     height: 100%;
     overflow: scroll;
 }
