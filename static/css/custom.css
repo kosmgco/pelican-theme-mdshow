@@ -52,13 +52,12 @@ html, body {
 }
 .links a {
     margin: 10px;
+    word-break: keep-all;
 }
 .link-tags {
     background: aliceblue !important;
     margin: 3px;
     font-size: 14px;
-}
-.links-menu {
 }
 
 /* 
