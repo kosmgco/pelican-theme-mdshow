@@ -3,35 +3,35 @@
 {% block title %} {{ SITENAME }} | {{ tag }} {% endblock %}
 
 {% block content %}
-    <style>
-        .tags {
-            padding-top: 10%;
-        }
-        .tags a {
-            margin: 10px 3px;
-        }
-        @media(max-width: 550px) {
-            body {
-                height: auto;
-            }
-            .menu .links, .menu .copyright {
-                display:none;
-            }
-            .menu {
-                height: 65%;
-            }
-            .content {
-                display: none;
-            }
-            .catalog {
-                display: block;
-            }
-        }
-    </style>
-    <h3>TAGS</h3><hr/>
-    <div class="tags">
-        {% for tag, articles in tags | sort %}
-            <a href="{{ SITEURL }}/{{ tag.url }}" style="font-size: {{ 14 * articles|count}}px">{{ tag }}</a>
-        {% endfor %}
-    </div>
+  <style>
+    .tags {
+      padding-top: 10%;
+    }
+    .tags a {
+      margin: 10px 3px;
+    }
+    @media(max-width: 550px) {
+      body {
+        height: auto;
+      }
+      .menu .links, .menu .copyright {
+        display:none;
+      }
+      .menu {
+        height: 65%;
+      }
+      .content {
+        display: none;
+      }
+      .catalog {
+        display: block;
+      }
+    }
+  </style>
+  <h3>TAGS</h3><hr/>
+  <div class="tags">
+    {% for tag, articles in tags | sort %}
+      <a href="{{ SITEURL }}/{{ tag.url }}" style="font-size: {{ 14 * articles|count}}px">{{ tag }}</a>
+    {% endfor %}
+  </div>
 {% endblock %}

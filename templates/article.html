@@ -3,32 +3,32 @@
 {% block title %} {{ SITENAME }} | {{ article.title }} {% endblock %}
 
 {% block content %}
-    <style>
-        @media(max-width: 550px) {
-            body {
-                height: auto;
-            }
-            .menu .links, .menu .copyright {
-                display:none;
-            }
-            .menu {
-                height: 65%;
-            }
-            .catalog {
-                display:none;
-            }
-            .content {
-                display: block;
-            }
-            h3 {
-                text-align: center;
-            }
-        }
-    </style>
-    <h3> {{ article.title }} </h3>
-    {% for tag in article.tags %}
-        <a href="{{ SITEURL }}/{{ tag.url }}" class="link-tags">{{ tag.name }}</a>
-    {% endfor %}
-    <hr style="clear:both"/>
-    {{ article.content }}
+  <style>
+    @media(max-width: 550px) {
+      body {
+        height: auto;
+      }
+      .menu .links, .menu .copyright {
+        display:none;
+      }
+      .menu {
+        height: 65%;
+      }
+      .catalog {
+        display:none;
+      }
+      .content {
+        display: block;
+      }
+      h3 {
+        text-align: center;
+      }
+    }
+  </style>
+  <h3> {{ article.title }} </h3>
+  {% for tag in article.tags %}
+    <a href="{{ SITEURL }}/{{ tag.url }}" class="link-tags">{{ tag.name }}</a>
+  {% endfor %}
+  <hr style="clear:both"/>
+  {{ article.content }}
 {% endblock %}

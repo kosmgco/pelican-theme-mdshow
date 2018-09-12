@@ -4,37 +4,37 @@
 
 {% block content %}
 <style>
-    em:after {
-        content: '\A';
-        white-space: pre-wrap;
+  em:after {
+    content: '\A';
+    white-space: pre-wrap;
+  }
+  .content h4 {
+    text-transform: uppercase;
+  }
+  @media(max-width: 550px) {
+    body {
+      height: auto;
     }
-    .content h4 {
-        text-transform: uppercase;
+    .menu .links, .menu .copyright {
+      display: none;
     }
-    @media(max-width: 550px) {
-        body {
-            height: auto;
-        }
-        .menu .links, .menu .copyright {
-            display: none;
-        }
-        .menu {
-            height: 65%;
-        }
-        .content {
-            display: block;
-        }
-        .catalog {
-            display: none;
-        }
+    .menu {
+      height: 65%;
     }
+    .content {
+      display: block;
+    }
+    .catalog {
+      display: none;
+    }
+  }
 </style>
 <h3>CATEGORIES</h3><hr/>
 {% for category, articles in categories %}
-    <h4> {{ category|upper }} </h4>
-    {% for article in articles %}
-    <a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a> <em>{{ article.date.strftime('%Y-%m-%d')}}</em>
-    {% endfor %}
+  <h4> {{ category|upper }} </h4>
+  {% for article in articles %}
+  <a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a> <em>{{ article.date.strftime('%Y-%m-%d')}}</em>
+  {% endfor %}
 {% endfor %}
 
 {% endblock %}

@@ -1,62 +1,62 @@
 <!doctype html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title> {% block title %} {{ SITENAME }} {% endblock %}</title>
-        {% include '_includes/_header.html' %}
-    </head>
-    <body class="markdown-body">
-        <style>
-            @media (max-width: 550px) {
-                .catalog, .content {
-                    display:none;
-                }
-            }
-        </style>
-        <div class="menu">
-            <div class="title" style="background: url({{ HEADER }}) no-repeat; background-position: center"></div>
-            <h3> {{ SITENAME }} </h3>
-            <h4> {{ SITEDESCRIPTION }} </h4>
-            <div class="links-menu" >
-                <a href="{{ SITEURL }}/" class="menu-link" title="HOME"><img src="/theme/images/home.png" width="40"/></a>
-                <a href="{{ SITEURL }}/tags.html" class="menu-link" title="TAGS"><img src="/theme/images/tags.png" width="40"/></a>
-                <a href="{{ SITEURL }}/categories.html" class="menu-link" title="CATEGORIES"><img src="/theme/images/categories.png" width="40"/></a>
-                {% for page in pages|sort %}
-                <a href="{{ SITEURL }}/{{ page.url }}" class="menu-link" title="{{ page.title|upper}}"><img src="/theme/images/{{ page.title }}.png" width="40"/></a>
-                {% endfor %} 
-            </div>
-            <div class="links">
-                {% for title, url in SOCIAL %}
-                <a href="{{ url }}" target="_blank">
-                    <img src="{{ SITEURL }}/theme/images/{{ title }}-128.png" style="width:32px;">
-                </a>
-                {% endfor %}
-            </div>
-            <div class="links">
-            {% for title, url in LINKS %}
-                <a href="{{ url }}" target="_blank">{{ title }}</a>
-            {% endfor %}
-            </div>
-            <div class="copyright">
-                &copy <a href="/">{{ SITENAME }}</a>. 2018<br />
-                Powered by <a href="https://getpelican.com" target="_blank">Pelican</a>. Theme by <a href="https://github.com/kosmgco/pelican-theme-mdshow" target="_blank">MDShow</a> 
-                <br />
-                {% if ICP %}
-                <a href="https://www.miitbeian.gov.cn/" target="_blank">{{ ICP }}</a>
-                {% endif %}
-            </div>
-        </div>
-        <div class="catalog">
-        {% for article in articles %}
-            <b>{{ article.date.strftime('%Y-%m-%d') }}</b><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a>
+  <head>
+    <meta charset="utf-8">
+    <title> {% block title %} {{ SITENAME }} {% endblock %}</title>
+    {% include '_includes/_header.html' %}
+  </head>
+  <body class="markdown-body">
+    <style>
+      @media (max-width: 550px) {
+        .catalog, .content {
+          display:none;
+        }
+      }
+    </style>
+    <div class="menu">
+      <div class="title" style="background: url({{ HEADER }}) no-repeat; background-position: center"></div>
+      <h3> {{ SITENAME }} </h3>
+      <h4> {{ SITEDESCRIPTION }} </h4>
+      <div class="links-menu" >
+        <a href="{{ SITEURL }}/" class="menu-link" title="HOME"><img src="/theme/images/home.png" width="40"/></a>
+        <a href="{{ SITEURL }}/tags.html" class="menu-link" title="TAGS"><img src="/theme/images/tags.png" width="40"/></a>
+        <a href="{{ SITEURL }}/categories.html" class="menu-link" title="CATEGORIES"><img src="/theme/images/categories.png" width="40"/></a>
+        {% for page in pages|sort %}
+        <a href="{{ SITEURL }}/{{ page.url }}" class="menu-link" title="{{ page.title|upper}}"><img src="/theme/images/{{ page.title }}.png" width="40"/></a>
+        {% endfor %} 
+      </div>
+      <div class="links">
+        {% for title, url in SOCIAL %}
+        <a href="{{ url }}" target="_blank">
+          <img src="{{ SITEURL }}/theme/images/{{ title }}-128.png" style="width:32px;">
+        </a>
         {% endfor %}
-        </div>
-        <div class="content">
-        {% block content %}
-        {% endblock %}
-        </div>
-        <script>
-        {% include '_includes/_scripts.html' %}
-        </script>
-    </body>
+      </div>
+      <div class="links">
+      {% for title, url in LINKS %}
+        <a href="{{ url }}" target="_blank">{{ title }}</a>
+      {% endfor %}
+      </div>
+      <div class="copyright">
+        &copy <a href="/">{{ SITENAME }}</a>. 2018<br />
+        Powered by <a href="https://getpelican.com" target="_blank">Pelican</a>. Theme by <a href="https://github.com/kosmgco/pelican-theme-mdshow" target="_blank">MDShow</a> 
+        <br />
+        {% if ICP %}
+        <a href="https://www.miitbeian.gov.cn/" target="_blank">{{ ICP }}</a>
+        {% endif %}
+      </div>
+    </div>
+    <div class="catalog">
+    {% for article in articles %}
+      <b>{{ article.date.strftime('%Y-%m-%d') }}</b><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a>
+    {% endfor %}
+    </div>
+    <div class="content">
+    {% block content %}
+    {% endblock %}
+    </div>
+    <script>
+    {% include '_includes/_scripts.html' %}
+    </script>
+  </body>
 </html>
