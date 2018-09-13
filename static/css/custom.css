@@ -93,3 +93,39 @@ html, body {
     }
 }
 
+.highlight .k,
+.highlight .kd, 
+.highlight .kc,
+.highlight .kn,
+.highlight .kp,
+.highlight .hr,
+.highlight .kt {
+    color: #d73a49;
+}
+
+.highlight .s,
+.highlight .sa,
+.highlight .sb,
+.highlight .sc,
+.highlight .dl,
+.highlight .sd,
+.highlight .s2,
+.highlight .se,
+.highlight .sh,
+.highlight .si,
+.highlight .sx,
+.highlight .sr,
+.highlight .s1,
+.highlight .ss {
+    color: #032f62;
+} 
+
+.highlight .c,
+.highlight .ch,
+.highlight .cm,
+.highlight .cp,
+.highlight .cpf,
+.highlight .c1,
+.highlight .cs {
+    color: #6a737d;
+}
