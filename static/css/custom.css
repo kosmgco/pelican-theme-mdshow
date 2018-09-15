@@ -99,7 +99,8 @@ html, body {
 .highlight .kn,
 .highlight .kp,
 .highlight .hr,
-.highlight .kt {
+.highlight .kt,
+.highlight .o {
     color: #d73a49;
 }
 
@@ -126,6 +127,18 @@ html, body {
 .highlight .cp,
 .highlight .cpf,
 .highlight .c1,
+.highlight .mi,
 .highlight .cs {
     color: #6a737d;
+}
+
+.highlight .nc,
+.highlight .nf {
+    color: #6f42c1;
+}
+
+.highlight .vm,
+.highlight .nb,
+.highlight .fm {
+    color: #005cc5;
 }
