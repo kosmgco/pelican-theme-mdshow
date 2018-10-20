@@ -9,7 +9,7 @@ ICP 备案号
 
 e.g:
 
-    `ICP='渝ICP备16003403号'`
+    ICP='渝ICP备16003403号'
 
 ##### ENABLE_HITOKOTO
 
@@ -17,7 +17,7 @@ e.g:
 
 e.g:
 
-    `ENABLE_HITOKOTO = True`
+    ENABLE_HITOKOTO = True
 
 ##### DISQUS_ENABLED
 
@@ -25,7 +25,7 @@ Disqus 评论
 
 e.g:
 
-    `DISQUS_ENABLED = True`
+    DISQUS_ENABLED = True
 
 ##### DISQUS_SITE_NAME
 
@@ -33,7 +33,7 @@ Disqus short site name
 
 e.g:
 
-    `DISQUS_SITE_NAME = 'https-example-com'`
+    DISQUS_SITE_NAME = 'https-example-com'
 
 ##### LINKS
 
@@ -41,7 +41,7 @@ e.g:
 
 e.g:
 
-    `LINKS = (('Google', 'https://www.google.com'),)`
+    LINKS = (('Google', 'https://www.google.com'),)
 
 ##### SOCIAL
 
@@ -49,7 +49,7 @@ e.g:
 
 e.g:
 
-    `SOCIAL = (('github', 'https://github.com/kosmgco'),)`
+    SOCIAL = (('github', 'https://github.com/kosmgco'),)
 
 ## Screenshots
 
