@@ -18,3 +18,18 @@
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
 {% endif %}
+
+{% if ENABLE_HITOKOTO %}
+  var hitokoto = document.getElementById('hitokoto');
+  if (hitokoto) {
+    var xhr = new XMLHttpRequest();
+    xhr.open('get', 'https://v1.hitokoto.cn');
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState === 4) {
+        var data = JSON.parse(xhr.responseText);
+        hitokoto.innerText = data.hitokoto;
+      }
+    }
+    xhr.send();
+  }
+{% endif %}

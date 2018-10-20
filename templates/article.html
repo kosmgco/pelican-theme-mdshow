@@ -31,4 +31,20 @@
   {% endfor %}
   <hr style="clear:both"/>
   {{ article.content }}
+
+  {% if DISQUS_ENABLED %}
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      var disqus_shortname = '{{ DISQUS_SITE_NAME }}';
+      var disqus_identifier = window.location.href;
+      (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'https://{{ DISQUS_SITE_NAME }}.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      }());
+  </script>
+  {% endif %}
 {% endblock %}
