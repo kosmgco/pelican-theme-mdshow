@@ -4,32 +4,44 @@ View at [kosmgco](https://blog.ooops.me)
 ## Configuration
 
 - ICP
+
 ICP 备案号
+
 e.g:
     `ICP='渝ICP备16003403号'`
 
 - ENABLE_HITOKOTO
+
 一言 API
+
 e.g:
     `ENABLE_HITOKOTO = True`
 
 - DISQUS_ENABLED
+
 Disqus 评论
+
 e.g:
     `DISQUS_ENABLED = True`
 
 - DISQUS_SITE_NAME
+
 Disqus short site name
+
 e.g:
     `DISQUS_SITE_NAME = 'https-example-com'`
 
 - LINKS
+
 外链
+
 e.g:
     `LINKS = (('Google', 'https://www.google.com'),)`
 
 - SOCIAL
+
 社交媒体
+
 e.g:
     `SOCIAL = (('github', 'https://github.com/kosmgco'),)`
 
